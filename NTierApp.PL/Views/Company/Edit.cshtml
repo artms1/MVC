@@ -1,0 +1,20 @@
+﻿@using NTierApp.BLL.Models;
+@{string action = ViewBag.Action;}
+@model CompanyModel
+
+@using (Html.BeginForm(action, "Company", FormMethod.Post))
+{
+
+    <table>
+        @Html.HiddenFor(p => p.Id)
+        <tr>
+            <td>@Html.LabelFor(p => p.Name)</td>
+            <td>@Html.TextBoxFor(p => p.Name)</td>
+            <td>@Html.LabelFor(p => p.Address)</td>
+            <td>@Html.TextBoxFor(p => p.Address)</td>
+        </tr>
+
+
+    </table>
+    <button>Submit</button>
+}

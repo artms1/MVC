@@ -1,0 +1,21 @@
+﻿@using NTierApp.BLL.Models;
+@model List<CompanyModel>
+
+<div><a href="/Company/Add/">Add new company</a></div>
+
+<table class="table table-bordered">
+    
+    <tr>
+        <th>Label</th>
+        <th>Address</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (CompanyModel company in Model)
+    {
+        <tr>
+            <td>@company.Name</td>
+            <td>@company.Address</td>
+           
+        </tr>
+    }
+</table>

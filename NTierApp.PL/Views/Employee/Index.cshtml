@@ -1,0 +1,22 @@
+﻿@using NTierApp.BLL.Models;
+@model List<EmployeeModel>
+
+<div><a href="/Employee/Add/">Add new employee</a></div>
+
+<table class="table table-bordered">
+    
+    <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Age</th>
+    </tr>
+    @foreach (EmployeeModel employee in Model)
+    {
+        <tr>
+            <td>@employee.FirstName</td>
+            <td>@employee.LastName</td>
+            <td>@employee.Age</td>
+
+        </tr>
+    }
+</table>
